@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pguranda <pguranda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pguranda <pguranda@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 10:04:33 by pguranda          #+#    #+#             */
-/*   Updated: 2022/04/22 15:52:28 by pguranda         ###   ########.fr       */
+/*   Updated: 2022/08/16 17:57:32 by pguranda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	**ft_split(char const *s, char c)
 	count_s = 0;
 	i = 0;
 	arr_len = ft_count_strings(s, c);
+	if (arr_len == 0)
+		return (NULL);
 	arr_str = (char **)malloc(arr_len * sizeof(char *) + sizeof(void *));
 	if (arr_str == NULL)
 		return (NULL);
